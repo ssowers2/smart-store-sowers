@@ -37,3 +37,6 @@
 2. Commit Changes: 5. `git commit -m "Message"`
 3. Push Changes to GitHub: `git commit -m "Message"`
 4. Pull Latest Changes:  `git push -u origin main`
+
+## Verify Git Configuration: Check that both user.name and user.email are correctly configured
+1. git config --list
