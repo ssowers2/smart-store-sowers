@@ -35,11 +35,11 @@ Practice completing a business intelligence project for a client.
 5. This is good time to `git add .`, `git commit -m "Message"`, `git push -u origin main` files to GitHub
 
 ## Git Commands Reminders 
-1. Add Changes: `git add .`
-2. Commit Changes: 5. `git commit -m "Message"`
-3. Push Changes to GitHub: `git commit -m "Message"`
-4. Pull Latest Changes:  `git push -u origin main`
-
+1. Pull Latest Changes:  `git pull`
+2. Add Changes: `git add .`
+3. Commit Changes: 5. `git commit -m "Update message"` update commit message a present tense verb
+4. Push Changes to GitHub: `git push -u origin main` and then afterwards `git push`
+   
 ## Verify Git Configuration: Check that both user.name and user.email are correctly configured
 1. git config --list
 
