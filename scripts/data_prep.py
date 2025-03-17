@@ -1,68 +1,48 @@
 """
-demo_script.py - A very simple Python script to demonstrate basic features.
-
-Date: January 2025
+Module 2: Initial Script to Verify Project Setup
+File: scripts/data_prep.py
 """
 
-#####################################
-# Define main Function
-#####################################
+import pathlib
+import sys
+import pandas as pd
+
+# For local imports, temporarily add project root to Python sys.path
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.append(str(PROJECT_ROOT))
+
+# Now we can import local modules
+from utils.logger import logger
+
+# Constants
+DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
+RAW_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("raw")
+
+def read_raw_data(file_name: str) -> pd.DataFrame:
+    """Read raw data from CSV."""
+    file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
+    try:
+        logger.info(f"Reading raw data from {file_path}.")
+        return pd.read_csv(file_path)
+    except FileNotFoundError:
+        logger.error(f"File not found: {file_path}")
+        return pd.DataFrame()  # Return an empty DataFrame if the file is not found
+    except Exception as e:
+        logger.error(f"Error reading {file_path}: {e}")
+        return pd.DataFrame()  # Return an empty DataFrame if any other error occurs
+
+def process_data(file_name: str) -> None:
+    """Process raw data by reading it into a pandas DataFrame object."""
+    df = read_raw_data(file_name)
 
 def main() -> None:
-    """
-    Main function to illustrate Python basics
-    """
-    print("Starting MAIN function.\n")
-    print("Name Python files with lowercase and underscores.\n")
-    print("In Python, comments start with a '#' symbol and are not executed.")
-    print("  Comments can also be wrapped in triple single quotes or triple back tics.\n")
-
-    print("Variables are used to store values.")
-    print("  Type hints are optional, and recommended for clarity.")
-    print("  example_number = 42")
-    print("  count: int = 42")
-    print("  temp_F: float = 42.2")
-    print(' user_name: str = "Data Analyst"\n')
-
-    example_number = 42
-    count: int = 42
-    temp_F: float = 42.2
-    user_name: str = "Data Analyst"
-    print(f"Result: {example_number=},{count=},{temp_F=},{user_name=}.\n")
-
-    # Calling functions
-    print("Functions in Python are blocks of reusable code.")
-    print("You can call a function by using its name followed by parentheses.\n")
-
-    print("We use f-strings to combine text and values in Python.")
-    print("  Put the f immediately before the opening quote of the string text.\n")
-
-    print("Python has many built-in functions, like min(), max(), len(), etc.")
-    numbers = [1, 2, 3]
-    minimum = min(numbers)
-    maximum = max(numbers)
-    count = len(numbers)
-    print(f"For the list of numbers: {numbers}")
-    print(f"  The minimum value is min(numbers): {minimum}")
-    print(f"  The maximum value is max(numbers): {maximum}")
-    print(f"  The length of the list is len(numbers): {count}\n")
-
-    is_important: bool = True
-
-    print(f"In Python, indentation matters = {is_important}!")
-    print(f"In Python, spelling matters = {is_important}!")
-    print(f"In Python, uppercase/lowercase matters = {is_important}!\n")
-
-    print("Experiment with this demo script to learn the basics quickly.\n")
-
-    # End the script
-    print("Exiting MAIN function.")
-
-#####################################
-# Conditional Execution
-#####################################
+    """Main function for processing customer, product, and sales data."""
+    logger.info("Starting data preparation...")
+    process_data("customers_data.csv")
+    process_data("products_data.csv")
+    process_data("sales_data.csv")
+    logger.info("Data preparation complete.")
 
 if __name__ == "__main__":
-    print("DEMO - Ready for work.")
     main()
-    print("DEMO - Execution complete.")
