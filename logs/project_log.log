@@ -1,0 +1,16 @@
+2025-03-17 18:37:40.952 | INFO     | logger:<module>:40 - Logging to file: logs\project_log.log
+2025-03-17 18:37:40.952 | INFO     | __main__:<module>:33 - Log folder created at: logs
+2025-03-17 18:37:40.952 | INFO     | __main__:<module>:40 - Logging to file: logs\project_log.log
+2025-03-17 18:37:40.952 | INFO     | __main__:<module>:40 - Logging to file: logs\project_log.log
+2025-03-17 18:37:40.952 | INFO     | __main__:main:62 - STARTING logger.py
+2025-03-17 18:37:40.952 | INFO     | __main__:main:62 - STARTING logger.py
+2025-03-17 18:37:40.952 | INFO     | __main__:log_example:53 - This is an example info message.
+2025-03-17 18:37:40.952 | INFO     | __main__:log_example:53 - This is an example info message.
+2025-03-17 18:37:40.952 | WARNING  | __main__:log_example:54 - This is an example warning message.
+2025-03-17 18:37:40.952 | WARNING  | __main__:log_example:54 - This is an example warning message.
+2025-03-17 18:37:40.952 | ERROR    | __main__:log_example:55 - This is an example error message.
+2025-03-17 18:37:40.952 | ERROR    | __main__:log_example:55 - This is an example error message.
+2025-03-17 18:37:40.952 | INFO     | __main__:main:67 - View the log output at logs\project_log.log
+2025-03-17 18:37:40.952 | INFO     | __main__:main:67 - View the log output at logs\project_log.log
+2025-03-17 18:37:40.952 | INFO     | __main__:main:68 - EXITING logger.py.
+2025-03-17 18:37:40.952 | INFO     | __main__:main:68 - EXITING logger.py.
