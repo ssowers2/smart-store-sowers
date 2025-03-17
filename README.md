@@ -47,7 +47,6 @@ Understanding purchasing behavior is key for creating effective personalized exp
 4. Choose the interpreter inside the .venv folder located in the project root directory.
 5. This is good time to `git add .`, `git commit -m "Message"`, `git push -u origin main` files to GitHub
 
-
 ## Git Commands Reminders 
 1. Add Changes: `git add .`
 2. Commit Changes: 5. `git commit -m "Message"`
@@ -56,3 +55,11 @@ Understanding purchasing behavior is key for creating effective personalized exp
 
 ## Verify Git Configuration: Check that both user.name and user.email are correctly configured
 1. git config --list
+
+## VS code Extension:
+1. SQLite
+2. SQLite Viewer
+3. Jupyter
+4. Prettier
+5. Markdown All in One
+6. Rainbow CSV
