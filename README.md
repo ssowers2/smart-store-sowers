@@ -3,29 +3,26 @@
 ## Purpose  
 Practice completing a business intelligence project for a client. 
 
-## Goals
-
 ## Step 1: New Project Setup
-1. Initialize Repository: Create a new GitHub repository with this format **smart-store-sowers** with a default `README.md`.
-2. Clone the repository to your local machine in the **Projects** folder.
-3. Open the project folder in **VS Code**.
+1. Initialize Repository: Create a new GitHub repository with this format **smart-store-sowers** with a default `README.md`
+2. Clone the repository to your local machine in the **Projects** folder
+3. Open the project folder in **VS Code**
 
 ## Step 2: Add Essential Files
-1. **.gitignore**  
-   Add a `.gitignore` file to specify files and folders to exclude from version control. You can reference an existing `.gitignore` template for Python projects.
-2. **requirements.txt**  
-   This file lists all necessary packages for the project. Review and adjust it to include or exclude packages based on your project’s needs.
-3. **README.md**  
-   Edit README.md to record commands, process, and notes so far as the project progresses.
+1. **.gitignore**: Add a `.gitignore` file to specify files and folders to exclude from version control. You can reference an existing `.gitignore` template for Python projects.
+2. **requirements.txt**: This file lists all necessary packages for the project. Review and adjust it to include or exclude packages based on your project’s needs.
+3. **README.md**: Edit README.md to record commands, process, and notes so far as the project progresses.
 4. 5. This is good time to `git add .`, `git commit -m "Message"`, `git push -u origin main` files to GitHub
 
 ## Step 3: Create and Manage Virtual Environment
-1. Run command `git pull` first, to make sure the current project contents are on the machine.
+1. Run command: `git pull` first, to make sure the current project contents are on the machine.
 2. Windows PowerShell: `python -m venv .venv` to create a new .venv environment in the project repo.
 3. Activate the Virtual Environment: `.\.venv\Scripts\activate`
 
 ## Step 4: Install Required Packages
-`pip install -r requirements.txt` to install all packages at once OR use `py -m pip install` commands to add packages on the go (e.g. `py -m pip install pandas` or group installs `pip install numpy pandas matplotlib seaborn`)
+1. `pip install -r requirements.txt` to install all packages at one time from a file
+2. `py -m pip install` to add packages on the go (e.g. `py -m pip install pandas`)
+3. `pip install numpy pandas matplotlib seaborn` for multiple packages
 
 ## Step 5: Select Python Interpreter in VS Code
 1. Ensure VS Code is set to use the .venv environment.
@@ -43,7 +40,7 @@ Practice completing a business intelligence project for a client.
 ## Verify Git Configuration: Check that both user.name and user.email are correctly configured
 1. git config --list
 
-## VS code Extension:
+## VS Code Extensions:
 1. SQLite
 2. SQLite Viewer
 3. Jupyter
