@@ -1,4 +1,4 @@
-ProductID,ProductName,Category,UnitPrice,StokeQuanity,StoreSection
+ProductID,ProductName,Category,UnitPrice,StockQuanity,StoreSection
 101,laptop,Electronics,793.12,20,Gadgets
 102,hoodie,Clothing,39.1,50,Apparel
 103,cable,Electronics,22.76,100,Gadgets
