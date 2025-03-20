@@ -1,9 +1,9 @@
-ProductID, ProductName, Category   , UnitPrice, StockQuanity, StoreSection
-      101, laptop     , Electronics,    793.12,           20, Gadgets
-      102, hoodie     , Clothing   ,     39.1 ,           50, Apparel
-      103, cable      , Electronics,     22.76,          100, Gadgets
-      104, hat        , Clothing   ,     43.1 ,           75, Apparel
-      105, football   , Sports     ,     19.78,           10, Sports
-      106, controller , Electronics,     88.98,            1, Gaming
-      107, jacket     , Clothing   ,     67.02,          100, Apparel
-      108, protector  , Electronics,     12.56,           20, Gadgets
+ProductID,ProductName,Category,UnitPrice,StockQuanity,StoreSection
+101,laptop,Electronics,793.12,20,Gadgets
+102,hoodie,Clothing,39.1,50,Apparel
+103,cable,Electronics,22.76,100,Gadgets
+104,hat,Clothing,43.1,75,Apparel
+105,football,Sports,19.78,10,Sports
+106,controller,Electronics,88.98,1,Gaming
+107,jacket,Clothing,67.02,100,Apparel
+108,protector,Electronics,12.56,20,Gadgets
