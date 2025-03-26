@@ -2,7 +2,7 @@ import pandas as pd
 from data_scrubber import DataScrubber
 
 # Load data
-df = pd.read_csv("data//prepared/sales_data_prepared.csv")
+df = pd.read_csv("data/prepared/sales_data_prepared.csv")
 
 # Create DataScrubber instance
 scrubber = DataScrubber(df)
