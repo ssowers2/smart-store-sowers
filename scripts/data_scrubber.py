@@ -148,7 +148,7 @@ class DataScrubber:
             # TODO: Fix the following logic to call str.upper() and str.strip() on the given column 
             # HINT: See previous function for an example
             self.df[column] = self.df[column].str.upper().str.strip()
-            return self.df""
+            return self.df
         except KeyError:
             raise ValueError(f"Column name '{column}' not found in the DataFrame.")
 
