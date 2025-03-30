@@ -50,3 +50,36 @@ Practice completing a business intelligence project for a client.
 
 ## Running a Python file (ex: data_prep.py stored in the scripts subfolder of project directory)
 1. py scripts\data_prep.py
+
+# Dimension Table: customers
+| column_name            | data_type | description               |
+|------------------------|-----------|---------------------------|
+| customerid             | TEXT      | Primary key               |
+| name                   | TEXT      | Customer’s full name      |
+| region                 | TEXT      | Customer's region         |
+| joindate               | DATE      | Cuatomer's Join date      |
+| loyaltypoints          | INTEGER   | Loyalty program points    |
+| preferredcontactmethod | TEXT      | Contact preference        |
+
+# Dimension Table: products
+| column_name   | data_type | description              |
+|---------------|-----------|--------------------------|
+| productid     | TEXT      | Primary key              |
+| productname   | TEXT      | Name of the product      |
+| category      | TEXT      | Product category         |
+| unitprice     | REAL      | Price per unit           |
+| stockquantity | INTEGER   | Product stock quantity   |
+| storesection  | TEXT      | Store section location   |
+
+# Fact Table: sales
+| column_name     | data_type | description                      |
+|------------------|-----------|---------------------------------|
+| transactionid    | TEXT      | Primary key                     |
+| saledate         | DATE      | Date of the transaction         |
+| customerid       | TEXT      | Foreign key to customers        |
+| productid        | TEXT      | Foreign key to products         |
+| storeid          | TEXT      | Store where purchase occurred   |
+| campaignid       | TEXT      | Marketing campaign ID           |
+| saleamount       | REAL      | Total sale amount               |
+| discountpercent  | REAL      | Discount applied to the sale    |
+| paymenttype      | TEXT      | Type of payment (e.g., credit)  |
