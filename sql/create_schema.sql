@@ -1,34 +1,37 @@
---Dimension Table: customers
+-- Drop old tables
+DROP TABLE IF EXISTS sales;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS products;
+
+-- Create new schema with corrected column names
 CREATE TABLE customers (
-    customerid TEXT PRIMARY KEY,
+    customer_id TEXT PRIMARY KEY,
     name TEXT,
     region TEXT,
-    joindate DATE,
-    loyaltypoints INTEGER,
-    preferredcontactmethod TEXT
+    join_date DATE,
+    loyalty_points INTEGER,
+    preferred_contact_method TEXT
 );
 
---Dimension Table: products
 CREATE TABLE products (
-    productid TEXT PRIMARY KEY,
-    productname TEXT,
+    product_id TEXT PRIMARY KEY,
+    product_name TEXT,
     category TEXT,
-    unitprice INTEGER,
-    stockquantity INTEGER,
-    storesection TEXT
+    unit_price REAL,
+    stock_quantity INTEGER,
+    store_section TEXT
 );
 
---Fact Table: sales
 CREATE TABLE sales (
-    transactionid TEXT PRIMARY KEY,
-    saledate DATE,
-    customerid TEXT,
-    productid TEXT, 
-    storeid TEXT, 
-    campaignid TEXT, 
-    saleamount REAL, 
-    discountpercent REAL,  
-    paymenttype TEXT,
-    FOREIGN KEY (customerid) REFERENCES customers(customerid),
-    FOREIGN KEY (productid) REFERENCES products(productid)
+    transaction_id TEXT PRIMARY KEY,
+    sale_date DATE,
+    customer_id TEXT,
+    product_id TEXT,
+    store_id TEXT,
+    campaign_id TEXT,
+    sale_amount REAL,
+    discount_percent REAL,
+    payment_type TEXT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
 );

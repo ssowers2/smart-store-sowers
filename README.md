@@ -52,34 +52,34 @@ Practice completing a business intelligence project for a client.
 1. py scripts\data_prep.py
 
 # Dimension Table: customers
-| column_name            | data_type | description               |
-|------------------------|-----------|---------------------------|
-| customerid             | TEXT      | Primary key               |
-| name                   | TEXT      | Customer’s full name      |
-| region                 | TEXT      | Customer's region         |
-| joindate               | DATE      | Cuatomer's Join date      |
-| loyaltypoints          | INTEGER   | Loyalty program points    |
-| preferredcontactmethod | TEXT      | Contact preference        |
+| column_name             | data_type | description               |
+|-------------------------|-----------|---------------------------|
+| customer_id             | TEXT      | Primary key               |
+| name                    | TEXT      | Customer’s full name      |
+| region                  | TEXT      | Customer's region         |
+| join_date               | DATE      | Join date                 |
+| loyalty_points          | INTEGER   | Loyalty program points    |
+| preferred_contact_method| TEXT      | Contact preference        |
 
 # Dimension Table: products
-| column_name   | data_type | description              |
-|---------------|-----------|--------------------------|
-| productid     | TEXT      | Primary key              |
-| productname   | TEXT      | Name of the product      |
-| category      | TEXT      | Product category         |
-| unitprice     | REAL      | Price per unit           |
-| stockquantity | INTEGER   | Product stock quantity   |
-| storesection  | TEXT      | Store section location   |
+| column_name    | data_type | description              |
+|----------------|-----------|--------------------------|
+| product_id     | TEXT      | Primary key              |
+| product_name   | TEXT      | Name of the product      |
+| category       | TEXT      | Product category         |
+| unit_price     | REAL      | Price per unit           |
+| stock_quantity | INTEGER   | Product stock quantity   |
+| store_section  | TEXT      | Store section location   |
 
 # Fact Table: sales
-| column_name     | data_type | description                      |
+| column_name      | data_type | description                     |
 |------------------|-----------|---------------------------------|
-| transactionid    | TEXT      | Primary key                     |
-| saledate         | DATE      | Date of the transaction         |
-| customerid       | TEXT      | Foreign key to customers        |
-| productid        | TEXT      | Foreign key to products         |
-| storeid          | TEXT      | Store where purchase occurred   |
-| campaignid       | TEXT      | Marketing campaign ID           |
-| saleamount       | REAL      | Total sale amount               |
-| discountpercent  | REAL      | Discount applied to the sale    |
-| paymenttype      | TEXT      | Type of payment (e.g., credit)  |
+| transaction_id   | TEXT      | Primary key                     |
+| sale_date        | DATE      | Date of the transaction         |
+| customer_id      | TEXT      | Foreign key to customers        |
+| product_id       | TEXT      | Foreign key to products         |
+| store_id         | TEXT      | Store where purchase occurred   |
+| campaign_id      | TEXT      | Marketing campaign ID           |
+| sale_amount      | REAL      | Total sale amount               |
+| discount_percent | REAL      | Discount applied to the sale    |
+| payment_type     | TEXT      | Type of payment (e.g., credit)  |
