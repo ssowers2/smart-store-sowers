@@ -101,9 +101,10 @@ Practice completing a business intelligence project for a client.
 ![Tables Verified - Sale](docs/sale.png)
 
 # Challenge Encountered: Foreign key constraint errors
-- Some records in the sales dataset referenced customer_ids or product_ids that were missing from the cleaned customers or products tables. To address this:
-- Sales with missing references were filtered out before insertion.
-- A debug check was added to log mismatches for visibility.
+- Issue: Some records in the sales dataset referenced customer_ids or product_ids that were missing from the cleaned customers or products tables.
+- Solution: Added filtering logic to the etl_to_dw.py script to exclude any sales records where the customer_id or product_id was missing in the corresponding dimension tables.
+This ensured that foreign key constraints would not be violated during insertion into the sale table.
   
 # Challenge Encountered: Column mismatches after cleaning
-- The original CSVs had PascalCase headers that needed to be converted to snake_case to match the database schema.
+- Issue: The original CSVs had PascalCase headers that needed to be converted to snake_case to match the database schema.
+- Solution: Converted all headers to  match the database schema. 
