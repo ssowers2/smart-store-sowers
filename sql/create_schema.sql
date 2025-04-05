@@ -1,10 +1,10 @@
 -- Drop old tables
-DROP TABLE IF EXISTS sales;
-DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS customer;
+DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS sale;
 
 -- Create new schema with corrected column names
-CREATE TABLE customers (
+CREATE TABLE customer (
     customer_id TEXT PRIMARY KEY,
     name TEXT,
     region TEXT,
@@ -13,7 +13,7 @@ CREATE TABLE customers (
     preferred_contact_method TEXT
 );
 
-CREATE TABLE products (
+CREATE TABLE product (
     product_id TEXT PRIMARY KEY,
     product_name TEXT,
     category TEXT,
@@ -22,7 +22,7 @@ CREATE TABLE products (
     store_section TEXT
 );
 
-CREATE TABLE sales (
+CREATE TABLE sale (
     transaction_id TEXT PRIMARY KEY,
     sale_date DATE,
     customer_id TEXT,
@@ -32,6 +32,6 @@ CREATE TABLE sales (
     sale_amount REAL,
     discount_percent REAL,
     payment_type TEXT,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+    FOREIGN KEY (product_id) REFERENCES product(product_id)
 );

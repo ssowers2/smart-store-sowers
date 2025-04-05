@@ -51,7 +51,7 @@ Practice completing a business intelligence project for a client.
 ## Running a Python file (ex: data_prep.py stored in the scripts subfolder of project directory)
 1. py scripts\data_prep.py
 
-# Dimension Table: customers
+# Dimension Table: customer
 | column_name             | data_type | description               |
 |-------------------------|-----------|---------------------------|
 | customer_id             | TEXT      | Primary key               |
@@ -61,7 +61,7 @@ Practice completing a business intelligence project for a client.
 | loyalty_points          | INTEGER   | Loyalty program points    |
 | preferred_contact_method| TEXT      | Contact preference        |
 
-# Dimension Table: products
+# Dimension Table: product
 | column_name    | data_type | description              |
 |----------------|-----------|--------------------------|
 | product_id     | TEXT      | Primary key              |
@@ -71,7 +71,7 @@ Practice completing a business intelligence project for a client.
 | stock_quantity | INTEGER   | Product stock quantity   |
 | store_section  | TEXT      | Store section location   |
 
-# Fact Table: sales
+# Fact Table: sale
 | column_name      | data_type | description                     |
 |------------------|-----------|---------------------------------|
 | transaction_id   | TEXT      | Primary key                     |
@@ -83,3 +83,8 @@ Practice completing a business intelligence project for a client.
 | sale_amount      | REAL      | Total sale amount               |
 | discount_percent | REAL      | Discount applied to the sale    |
 | payment_type     | TEXT      | Type of payment (e.g., credit)  |
+
+# The screenshots below shows that all three tables in the `smart_sales.db` file were successfully populated:
+![Tables Verified - Customer](docs/customer.png)
+![Tables Verified - Product](docs/product.png)
+![Tables Verified - Sale](docs/sale.png)
