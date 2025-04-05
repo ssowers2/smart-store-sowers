@@ -84,7 +84,26 @@ Practice completing a business intelligence project for a client.
 | discount_percent | REAL      | Discount applied to the sale    |
 | payment_type     | TEXT      | Type of payment (e.g., credit)  |
 
+
+# The database consists of three main tables with a star schema structure:
+- customer (dimension)
+- product (dimension)
+- sale (fact)
+
+# The sale table includes foreign keys referencing the customer and product tables to ensure each sale is tied to valid dimension data.
+- All primary keys are TEXT to match the data in the CSVs.
+- Foreign key constraints were enabled with PRAGMA foreign_keys = ON.
+- The schema enforces referential integrity between related records.
+
 # The screenshots below shows that all three tables in the `smart_sales.db` file were successfully populated:
 ![Tables Verified - Customer](docs/customer.png)
 ![Tables Verified - Product](docs/product.png)
 ![Tables Verified - Sale](docs/sale.png)
+
+# Challenge Encountered: Foreign key constraint errors
+- Some records in the sales dataset referenced customer_ids or product_ids that were missing from the cleaned customers or products tables. To address this:
+- Sales with missing references were filtered out before insertion.
+- A debug check was added to log mismatches for visibility.
+  
+# Challenge Encountered: Column mismatches after cleaning
+- The original CSVs had PascalCase headers that needed to be converted to snake_case to match the database schema.
