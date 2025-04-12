@@ -108,3 +108,37 @@ This ensured that foreign key constraints would not be violated during insertion
 # Challenge Encountered: Column mismatches after cleaning
 - Issue: The original CSVs had PascalCase headers that needed to be converted to snake_case to match the database schema.
 - Solution: Converted all headers to  match the database schema. 
+
+# Power BI Sales Dashboard Report
+This Power BI dashboard provides an overview of product revenue and customer spending over a selected date range. It allows for slicing, dicing, and analysis of sales trends by product, customer, category, region, and time.
+![Power BI Dashboard](image.png)
+
+## Date Filter
+**Sales Date Slicer (Top Left)**  
+A range slicer is used to filter the entire dashboard by sales date. This allows users to view performance metrics within a specific time period.
+![Sales Date Slicer](image-2.png)
+
+## Regional Sales Table
+**Category Sales by Region (Top Left Table)**  
+This matrix visual breaks down total sales by product category (Clothing, Electronics, Sports) across four geographic regions (East, North, South, West). It includes row-level totals and a grand total to show cumulative sales performance.
+![Regional Sales Table](image-3.png)
+
+## Customer Spending
+**Total Amount Spent by Customer (Top Right Bar Chart)**  
+A horizontal bar chart displaying the total amount spent by each customer in descending order. This chart highlights top customers and helps identify key revenue drivers.
+![Total Amount Spent by Customer](image-4.png)
+
+## Monthly Sales Trend
+**Total Sale Amount by Month (Bottom Left Column Chart)**  
+A column chart showing the total sales amount grouped by month. The x-axis is sorted by calendar order and also displays the quarter and year. This helps visualize monthly fluctuations in sales performance.
+![Monthly Sales Trend](image-5.png)
+
+## Top Products by Revenue
+**Top Revenue Products (Bottom Right Line and Area Chart)**  
+A combined line and area chart ranking products by total revenue in descending order. This visual highlights the highest-grossing products and helps prioritize inventory or promotional strategies.
+![Top Products by Revenuet](image-6.png)
+
+## Dashboard Notes
+- All visuals respond to the selected Sales Date filter.
+- The data has been transformed in Power Query to extract Year, Quarter, Month Name, and Month Number from the sale date field.
+- Month Name is sorted by Month Number to ensure correct chronological display.
