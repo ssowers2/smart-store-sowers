@@ -126,7 +126,7 @@ This matrix visual breaks down total sales by product category (Clothing, Electr
 ## Customer Spending
 **Total Amount Spent by Customer (Top Right Bar Chart)**  
 A horizontal bar chart displaying the total amount spent by each customer in descending order. This chart highlights top customers and helps identify key revenue drivers.
-![Total Amount Spent by Customer](image-4.png)
+![Total Amount Spent by Customer](image-7.png)
 
 ## Monthly Sales Trend
 **Total Sale Amount by Month (Bottom Left Column Chart)**  
