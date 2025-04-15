@@ -251,10 +251,10 @@ Average Sale = AVERAGE(Transactions[sale_amount])
 Top Loyalty Points = MAX(Customers[loyalty_points])
 
 ## Visualizations
-![Total Sales Customer and Region Dashboard](images/image-8.png)  
-![Slicer By Email Preferred Contact Method](images/image-8.png)  
-![Slicer By Region](images/image-8.png)  
-![Slicer By Product](images/image-8.png)
+![Total Sales Customer and Region Dashboard](images\power_bi_dashboard.png)  
+![Slicer By Email Preferred Contact Method](images/power_bi_by_email.png)  
+![Slicer By Region](images/slicer_by_region.png)  
+![Slicer By Product](images/slicer_by_product.png)
 ---
 ## Section 6: Business Actions
 Based on the dashboard insights, I would recommend the following actions:
