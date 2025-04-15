@@ -246,7 +246,6 @@ I worked from prepared data tables. The data was initially cleaned and structure
 - Slicers for Region, Preferred Contact Method, Product Category, and Purchase Month
 
 ### Measures Created (DAX):
-```DAX
 Total Sales = SUM(Transactions[sale_amount])
 Average Sale = AVERAGE(Transactions[sale_amount])
 Top Loyalty Points = MAX(Customers[loyalty_points])
