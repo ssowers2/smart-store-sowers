@@ -142,3 +142,128 @@ A combined line and area chart ranking products by total revenue in descending o
 - All visuals respond to the selected Sales Date filter.
 - The data has been transformed in Power Query to extract Year, Quarter, Month Name, and Month Number from the sale date field.
 - Month Name is sorted by Month Number to ensure correct chronological display.
+
+----
+# Smart Sales OLAP Analysis Project
+
+## Section 1: The Business Goal
+
+### Business Objective:
+**Identify the top-performing customer segments based on total sales and loyalty points, broken down by region and contact preference to guide targeted promotions.**
+
+### Why It Matters:
+By identifying high-value customers and understanding their preferred communication channels, the business can tailor loyalty rewards, marketing strategies, and outreach efforts. This enhances engagement, boosts sales, and strengthens customer retention.
+
+---
+
+## Section 2: Data Source
+
+### Source Type: 
+I worked from prepared data tables. The data was initially cleaned and structured using Python and then stored in a SQLite database. I connected Power BI directly to this SQLite database to perform my OLAP analysis. 
+
+### Tables and Key Columns Used:
+**Customer Table**
+- `name`
+- `region`
+- `loyalty_points`
+- `preferred_contact_method`
+- `region`
+
+**Product Table**
+- `product category`
+
+**Sale Table**
+- `sale_date` (used to extract `Month Name`, `MonthNumber`, `Year`)
+- `sale_amount`
+
+---
+
+## Section 3: Tools
+
+### Tool Used:
+**Microsoft Power BI was selected due to:**
+- Easy-to-use drag-and-drop interface
+- Ideal for building interactive dashboards
+- Supports slicing, dicing, and OLAP-style analysis
+- Built-in support for custom measures (DAX)
+- Easy sharing with business users and stakeholders
+  
+---
+
+## Section 4: Workflow & Logic
+
+### Dimensions Used:
+- Customer Name (Capitalized)
+- Region
+- Preferred Contact Method
+- Month (extracted from `sale_date`)
+
+### Numeric Metrics:
+- `Total Sales` (Sum of `sale_amount`)
+- `Loyalty Points` (Sum per customer)
+- `Average Sale` (Average of `sale_amount`)
+
+### Aggregations:
+- Sales aggregated by customer, region, and month
+- Loyalty points aggregated by customer and region
+- Grouped by Region, Customer, Preferred Contact Method
+
+### Slicing:
+- Filter by Region
+- Filter by Preferred Contact Method
+- Filter by Month/Year
+- Filter by Product Purchased
+- The slicer format was a dropdown menu with the "Select all" option for easier user navigation
+
+### Dicing:
+- Break down by Customer and Region
+
+### Drilldowns:
+- Year → Month
+- Region → Customer → Products Purchased
+
+---
+
+## Section 5: Plan Your OLAP Analysis
+
+### Output Title:
+**"Top Customer Segments by Sales and Loyalty Points"**
+
+### Visual Types:
+- **Clustered Column Chart** (Total Sales by Customer, segmented by Region)
+- **KPI Cards** (Total Sales, Average Sale, Top Loyalty Points)
+- **Matrix Table** (Sales and Loyalty Points by Region and Contact Method)
+
+### Axis Labels:
+- **X-axis:** Customer Name
+- **Y-axis:** Total Sales Amount
+- **Legend:** Region
+
+### Visual Features:
+- Distinct region colors for bars
+- Data labels showing total sales per customer
+- Tooltip showing loyalty points
+- Slicers for Region, Preferred Contact Method, Product Category, and Purchase Month
+
+### Measures Created (DAX):
+```DAX
+Total Sales = SUM(Transactions[sale_amount])
+Average Sale = AVERAGE(Transactions[sale_amount])
+Top Loyalty Points = MAX(Customers[loyalty_points])
+
+---
+
+## Section 6: Business Actions
+Based on the dashboard insights, I would recommend the following actions:
+
+- **Reward Top-Performing Customers:**  
+  Customers such as Hermione Grager, Dr Who, and Jason Bourne generated the highest total sales. These customers should be enrolled in a VIP loyalty program or offered exclusive rewards to encourage retention and continued spending.
+
+- **Personalize Outreach by Contact Method:**  
+  Text and email were the most common contact methods among top-spending customers. Promotions should be tailored using these preferences to improve engagement and response rates.
+
+- **Leverage High-Value Regions:**  
+  The East and West regions produced the highest sales and loyalty point totals. Regional campaigns or localized promotions should be prioritized in these areas to drive and sustain continued success.
+
+- **Engage Low-Activity Segments:**  
+  Customers such as Tony Stark and Tiffany James showed lower purchase activity. These segments could be targeted with reactivation campaigns or personalized incentives to boost participation and sales.
