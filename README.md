@@ -251,8 +251,13 @@ Total Sales = SUM(Transactions[sale_amount])
 Average Sale = AVERAGE(Transactions[sale_amount])
 Top Loyalty Points = MAX(Customers[loyalty_points])
 
----
+Visualizations
+![Total Sales Customer and Region](image-8.png)
+![Slicer Example By Email Preferred Contact Method](image-8.png)
+![Slicer By Regios](image-8.png)
+![Slicer By Product](image-8.png)
 
+---
 ## Section 6: Business Actions
 Based on the dashboard insights, I would recommend the following actions:
 
