@@ -307,10 +307,14 @@ The dataset includes three main tables:
 - **Pie Chart**: Proportion of sales by payment type  
 - **Stacked Bar Chart**: Monthly sales breakdown by category  
 - **Bar Chart**: Top 3 selling products per selected month  
+
+2024 Product Category Sales Insights Dashboard
 ![Product Category Sales Insights Dashboard](images/power_bi_sales_insights.png)
 
+Highest Sales By Month and Category
 ![Highest Sales By Month and Category](images/highest_sales_month_category.png)
 
+Highest Sales By Region
 ![Highest Sales By Region](images/highest_sales_region.png)
 
 ### Key Insights
