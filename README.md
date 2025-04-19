@@ -270,3 +270,80 @@ Based on the dashboard insights, I would recommend the following actions:
 
 - **Engage Low-Activity Segments:**  
   Customers such as Tony Stark and Tiffany James showed lower purchase activity. These segments could be targeted with reactivation campaigns or personalized incentives to boost participation and sales.
+
+
+# Sales Insight Dashboard – Analyzing Product Trends Over Time
+## Section 1. The Business Goal
+The goal of this project is to analyze sales trends by product category over time. This helps stakeholders identify which product lines are growing or declining, so resources can be better allocated to marketing, inventory, or discontinuations.
+
+---
+
+## Section 2. Data Source
+The dataset includes three main tables:
+- **Sale Table**: Contains transaction details including date, amount, product ID, and payment type.
+- **Product Table**: Includes category, product name, unit price, and product ID.
+- **Customer Table**: Contains region and join date.
+
+---
+
+## Section 3. Tools Used
+- **Power BI**: Used for data modeling, visualizations, and dashboard creation.
+- **Data Analysis Expressions (DAX)**: Used for calculating total sales and average sales by category.
+- **Power Query Editor**: Used to clean, format, and prepare data (e.g., capitalization of text fields, formatting dates).
+
+---
+
+## Section 4. Workflow & Logic
+- Loaded and related the sale, product, and customer tables using Power BI's model view.
+- Added date fields (`Month`, `Year`, `MonthYear`) using calculated columns for trend analysis.
+- Manually formatted `product_category` and `payment_type` for consistent capitalization.
+- Created custom DAX measures such as: Total Sales = SUM(Sale[sale_amount])
+
+## Section 5. Results
+### Visualizations
+
+- **KPI Cards**: Total Sales and Average Sales by Category  
+- **Line Chart**: Sales trends by product category (MonthYear)  
+- **Pie Chart**: Proportion of sales by payment type  
+- **Stacked Bar Chart**: Monthly sales breakdown by category  
+- **Bar Chart**: Top 3 selling products per selected month  
+
+### Key Insights
+- **Electronics** generated the highest sales.  
+- **Sports** had the lowest sales across all months.  
+- Most sales were made via **Credit** and **Debit** payment types.  
+- The **Top 3 products** drove the majority of monthly sales which were jackets, controllers, and hoodies.
+
+---
+## Section 6. Suggested Business Actions
+- **Increase inventory for high-performing categories/products**:  
+  Clothing and Electronics both generated high revenue, with products like the "Jacket" and "Controller" appearing among the Top 3 selling items. I would recommned increasing inventory for these categories especially around February since that was a high selling month. 
+
+- **Reevaluate or discontinue low-performing product categories**:  
+  The Sports category showed very low sales in all months and had no representation in the Top 3 products. I think the business may want to reassess demand for this category by promoting clearance sales or consider phasing these products out altogether.
+
+- **Launch targeted promotions during lower-sales months**:  
+  January and March reflected lower total sales volume. Targeted promotions such as limited-time discounts, bundle deals, or loyalty point incentives during these slower months could boost revenue.
+
+- **Offer checkout incentives aligned with popular payment types**:  
+  Credit and Debit were the most popular payment methods (75% combined). Offering double loyalty points or higher percent discounts to use these payment methods could increase sales.
+
+---
+
+## Section 7. Challenges
+- **The dataset was small, limiting broader trend views**:  
+  With only three months of data, it's difficult to identify strong seasonal patterns or make confident long-term decisions. While February saw a significant spike, it's unclear whether this trend recurs yearly.
+
+- **Small sales values sometimes made data labels difficult to display clearly**:  
+ Challenge: Dealing with small sales values that caused data labels to disappear on stacked bar and pie charts. This made it difficult to visualize the performance of low-performing categories. I also had to manually clean and reformat data fields like payment_type and product_category for consistent capitalization and readability in visuals.
+
+ Solution: I addressed the label issue by switching from vertical to horizontal bar charts, which gave more space for labels to display. I also used tooltips to ensure all values could still be accessed even if they weren’t visually labeled. In Power Query, I capitalized category and payment values.
+
+---
+
+## Section 8. Ethical Considerations
+- **No AI or predictive modeling was used; the project remained descriptive**:  
+  While the data itself was neutral there is always the potential for unintentional bias to appear in how the data is presented or interpreted. For example, emphasizing certain product categories or payment types could influence stakeholder decisions without accounting for external factors (e.g., marketing, regional preferences). However, by providing transparent metrics and avoiding assumptions about customer behavior, I aimed to reduce the risk of reinforcing bias.
+
+- **Stakeholders should avoid making critical decisions without further data validation**:  
+  The dataset is limited in both time (just three months of data) and volume. This makes it difficult to draw long-term conclusions or identify true seasonal trends. Therefore, any suggested business actions should be considered preliminary and validated against larger, more complete datasets before implementation.
