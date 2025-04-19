@@ -344,9 +344,9 @@ Highest Sales By Region
   With only three months of data, it's difficult to identify strong seasonal patterns or make confident long-term decisions. While February saw a significant spike, it's unclear whether this trend recurs yearly.
 
 - **Small sales values sometimes made data labels difficult to display clearly**:  
- Challenge: Dealing with small sales values that caused data labels to disappear on stacked bar and pie charts. This made it difficult to visualize the performance of low-performing categories. I also had to manually clean and reformat data fields like payment_type and product_category for consistent capitalization and readability in visuals.
+  Challenge: Dealing with small sales values that caused data labels to disappear on stacked bar and pie charts. This made it difficult to visualize the performance of low-performing categories. I also had to manually clean and reformat data fields like payment_type and product_category for consistent capitalization and readability in visuals.
 
- Solution: I addressed the label issue by switching from vertical to horizontal bar charts, which gave more space for labels to display. I also used tooltips to ensure all values could still be accessed even if they weren’t visually labeled. In Power Query, I capitalized category and payment values.
+  Solution: I addressed the label issue by switching from vertical to horizontal bar charts, which gave more space for labels to display. I also used tooltips to ensure all values could still be accessed even if they weren’t visually labeled. In Power Query, I capitalized category and payment values.
 
 ---
 
