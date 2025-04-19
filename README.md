@@ -352,7 +352,7 @@ Highest Sales By Region
 
 ## Section 8. Ethical Considerations
 - **No AI or predictive modeling was used; the project remained descriptive**:  
-  While the data itself was neutral there is always the potential for unintentional bias to appear in how the data is presented or interpreted. For example, emphasizing certain product categories or payment types could influence stakeholder decisions without accounting for external factors (e.g., marketing, regional preferences). However, by providing transparent metrics and avoiding assumptions about customer behavior, I aimed to reduce the risk of reinforcing bias.
+  One ethical consideration I accounted for was the potential for unintentional bias in how the data is presented or interpreted. For instance, highlighting certain product categories or payment types could influence stakeholder decisions without considering external factors like marketing efforts or regional preferences. To address this, I focused on presenting transparent, descriptive metrics without making assumptions about customer behavior. By sticking to actual sales data and avoiding predictive claims, I aimed to minimize bias.
 
 - **Stakeholders should avoid making critical decisions without further data validation**:  
   The dataset is limited in both time (just three months of data) and volume. This makes it difficult to draw long-term conclusions or identify true seasonal trends. Therefore, any suggested business actions should be considered preliminary and validated against larger, more complete datasets before implementation.
